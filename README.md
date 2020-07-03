@@ -11,8 +11,8 @@ Após ouvir a opinião de alguns amigos mais experiêntes, vi que minhas soluç�
 A nova ideia foi utilizar um dataset disponibilizado na internet (https://www.kaggle.com/mylesoneill/pokemon-sun-and-moon-gen-7-stats/) como base para alimentar o programa.
 
 O passo a passo que pensei para a construção do programa (desde o projeto inicial) foi:
-1. Registrar os Pokémons no programa.
-2. Registrar os golpes no programa.
+1. Registrar os Pokémons no programa. (ok)
+2. Registrar os golpes no programa. (ok)
 3. Fazer os ajustes no(s) Pokémon(s) escolhido(s) pelo(s) jogador(es). Level, golpes, natureza, atributos...
 4. Criar um algorítimo para o funcionamento da batalha que contemple uma mecânica semelhante à mecânica de batalha dos jogos clássicos.
 5. Criar um algorítimo que diga ao programa que Pokémon irá fazer o primeiro movimento.
