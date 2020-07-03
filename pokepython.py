@@ -1,37 +1,11 @@
-#aqui são definidos os pokémons com suas características. cada self.algumacoisa define uma característica
-class Pokemon:
-    def __init__(self, id, species, forme, type1, type2, hp, attack, defense, spattack, spdefense, speed, sex = None, level = None):
-        self.id = id
-        self.species = species
-        self.forme = forme
-        self.type1 = type1
-        self.type2 = type2
-        self.hp = hp
-        self.attack = attack
-        self.defense = defense
-        self.spattack = spattack
-        self.spdefense = spdefense
-        self.speed = speed
-        self.movimentos = []
+from pokemons import Pokemon
+from pokemons import import_pokemon
+from golpes import Golpe
+from golpes import import_golpe
 
-#aqui eu estou dizendo pro programa ler um arquivo com o dataset e atribuir cada coluna a uma característica anteriormente definida na classe Pokemon.
-def import_pokemon(dataset_ulr):
-    file = open(dataset_ulr)
-    pokemons = {}
-    for poke in file:
-        coluna = poke.split(',')
-        if not coluna[0].isnumeric:
-           continue
-        poke = Pokemon(coluna[0], coluna[2], coluna[3], coluna[4], coluna[5], coluna[9], coluna[10], coluna[11], coluna[12], coluna[13], coluna[14]) 
-        pokemons[coluna[3]] = poke
-    return pokemons
-
-#rodando a função anterior
 lista_pokemons = import_pokemon('pokemon.csv')
+lista_golpes = import_golpe('moves.csv')
 
-
-# Para a batalha: escolher dois pokémons, um para cada jogador.
-# Pensar em uma forma de o programa jogar com o segundo poké (IA, talvez?).
 p1 = lista_pokemons[input('Player 1: Escolha um pokémon: ')]
 p1.level = input('{} lvl: '.format(p1.forme))
 print('')
