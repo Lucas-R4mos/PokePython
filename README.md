@@ -1,6 +1,8 @@
 # simulador-pykemon
 Um simulador de batalhas Pokémon em Python
 
+Para a utilização do programa, execute o arquivo pokepython.py
+
 Este é um projeto de um iniciante em programação, feito com o intúito de aprender a utilizar as diversas possibilidades na programação. :)
 
 A idéia inicial foi simular uma batalha 1 vs 1 (dois jogadores) e definir poucos Pokémons com uma lista de golpes pré definida. Eu devo disponibilizar o arquivo do protótipo (inconcluído).
