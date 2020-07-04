@@ -19,10 +19,14 @@ player1.atributos.hp = int(player1.atributos.hp)
 player2.atributos.hp = int(player2.atributos.hp)
 while not player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
     for player in players:
-        print('{}: HP: {}'.format(player.pokemon.forme, player.atributos.hp)) 
+        print('{} ({}/{}): HP: {}'.format(player.pokemon.forme, player.pokemon.type1, player.pokemon.type2, player.atributos.hp)) 
         print('Golpes:')
         player.golpe_usado = input('Escolha um golpe: ')  
         print('')
+    
+    print('{} usou {}.'.format(player1.pokemon.forme, player1.golpe_usado))
+    print('{} usou {}.'.format(player2.pokemon.forme, player2.golpe_usado))
+    print('')
 
 
 # Dano = (((((2 * level) / 5) + 2) * poder * (ataque / defesa) / 50) + 2) * Modificador
