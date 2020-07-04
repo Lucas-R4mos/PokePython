@@ -1,7 +1,7 @@
 # simulador-pykemon
 Um simulador de batalhas Pokémon em Python
 
-Para a utilização do programa, execute o arquivo pokepython.py
+Para a utilização do programa, execute o arquivo pokepython.py com o Python3
 
 Este é um projeto de um iniciante em programação, feito com o intúito de aprender a utilizar as diversas possibilidades na programação. :)
 
