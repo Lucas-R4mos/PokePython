@@ -1,7 +1,8 @@
 # simulador-pykemon
 Um simulador de batalhas Pokémon em Python
 
-Para a utilização do programa, execute o arquivo pokepython.py com o Python3
+- Para a utilização do programa, execute o arquivo pokepython.py com o Python3.
+- A escolha dos Pokémon é de acordo com o nome do Pokémon com a inicial em maiúsculo (Blastoise, Charizard, etc.).
 
 Este é um projeto de um iniciante em programação, feito com o intúito de aprender a utilizar as diversas possibilidades na programação. :)
 
@@ -13,8 +14,13 @@ A nova ideia foi utilizar um dataset disponibilizado na internet (https://www.ka
 O passo a passo que pensei para a construção do programa (desde o projeto inicial) foi:
 1. Registrar os Pokémons no programa. (ok)
 2. Registrar os golpes no programa. (ok)
-3. Fazer os ajustes no(s) Pokémon(s) escolhido(s) pelo(s) jogador(es). Level, golpes, natureza, atributos...
-4. Criar um algorítimo para o funcionamento da batalha que contemple uma mecânica semelhante à mecânica de batalha dos jogos clássicos.
+3. Fazer os ajustes no(s) Pokémon(s) escolhido(s) pelo(s) jogador(es). Level, golpes, natureza, atributos... (+/- ok)
+3.0. OBS: já concluído: level, atributos base.
+3.1. Nova demanda: Aplicar um algorítimo que faça os atributos do pokémon crescerem de acordo com o level escolhido.
+3.2. Importar a natureza dos pokémons.
+3.3. Ajustar a Classe MoveSet para importar os movimentos que o Pokémon pode aprender.
+3.4. Escolher 4 golpes entre os possíveis para o Pokémon (de forma aleatória? escolhendo um por um? escolhendo os últimos que o Pokémon aprendeu naquele level?)
+4. Criar um algorítimo para o funcionamento da batalha que contemple uma mecânica semelhante à mecânica de batalha dos jogos clássicos. (+/- ok)
 5. Criar um algorítimo que diga ao programa que Pokémon irá fazer o primeiro movimento.
 6. Criar um algorítimo que cause o dano no Pokémon adversário.
 7. Criar um algorítimo que cause buffs/debuffs/efeitos negativos(dormir/envenenamento/congelamento...).
