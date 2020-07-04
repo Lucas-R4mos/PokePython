@@ -5,10 +5,7 @@ class Pokemon:
         self.forme = forme
         self.type1 = type1
         self.type2 = type2
-        self.moveset = []
-        self.golpes = []
-        self.golpe_usado = []
-
+        
 def import_pokemon(dataset_ulr):
     file = open(dataset_ulr)
     pokemons = {}

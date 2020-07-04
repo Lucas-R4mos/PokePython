@@ -8,7 +8,6 @@ class Atributos:
         self.spdefense = spdefense
         self.speed = speed
 
-
 def import_atributo(dataset_ulr):
     file = open(dataset_ulr)
     atributos = {}
