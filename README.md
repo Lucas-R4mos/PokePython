@@ -15,11 +15,10 @@ O passo a passo que pensei para a construção do programa (desde o projeto inic
 1. Registrar os Pokémons no programa. (ok)
 2. Registrar os golpes no programa. (ok)
 3. Fazer os ajustes no(s) Pokémon(s) escolhido(s) pelo(s) jogador(es). Level, golpes, natureza, atributos... (+/- ok)
-- OBS: já concluído: level, atributos base.
+- OBS: já concluído: level, atributos base, MoveSet.
 - Nova demanda: Aplicar um algorítimo que faça os atributos do pokémon crescerem de acordo com o level escolhido.
-- Importar a natureza dos pokémons.
-- Ajustar a Classe MoveSet para importar os movimentos que o Pokémon pode aprender.
 - Escolher 4 golpes entre os possíveis para o Pokémon (de forma aleatória? escolhendo um por um? escolhendo os últimos que o Pokémon aprendeu naquele level?)
+- Importar a natureza dos pokémons.
 4. Criar um algorítimo para o funcionamento da batalha que contemple uma mecânica semelhante à mecânica de batalha dos jogos clássicos. (+/- ok)
 5. Criar um algorítimo que diga ao programa que Pokémon irá fazer o primeiro movimento.
 6. Criar um algorítimo que cause o dano no Pokémon adversário.
