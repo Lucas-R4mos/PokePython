@@ -5,7 +5,7 @@ class MoveSet:
 
 def import_moveset(dataset_ulr):
     file = open(dataset_ulr)
-    # D = {Chave pokemon: Value :{chave lv: value move}}
+    # D = {Chave pokemon: Value :{chave move: value lvl}}
     movesets = {}
     for moveset in file:
         linha = moveset.split(',')
