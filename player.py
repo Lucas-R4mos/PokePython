@@ -17,10 +17,10 @@ class Player:
         self.nome = nome
         self.pokemon = lista_pokemons[self.nome]
         self.atributos = lista_atributos[self.nome]
+        self.movesets = lista_movesets[self.nome]
+        self.golpes = [] #fazer um algorítimo que escolha 4 golpes em self.moveses.golpes_possiveis
         self.golpe_usado = []
-        # self.movesets = lista_movesets[nome]
-        # self.golpes = []
-
+        
 def import_player(dataset_ulr):
     file = open(dataset_ulr)
     pokemon_player = {}
