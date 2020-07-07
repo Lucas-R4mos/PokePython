@@ -19,7 +19,7 @@ O passo a passo que pensei para a construção do programa (desde o projeto inic
 - Nova demanda: Aplicar um algorítimo que faça os atributos do pokémon crescerem de acordo com o level escolhido.
 - Escolher 4 golpes entre os possíveis para o Pokémon (de forma aleatória? escolhendo um por um? escolhendo os últimos que o Pokémon aprendeu naquele level?)
 - Importar a natureza dos pokémons.
-4. Criar um algorítimo para o funcionamento da batalha que contemple uma mecânica semelhante à mecânica de batalha dos jogos clássicos. (+/- ok)
+4. Criar um algorítimo para o funcionamento da batalha que contemple uma mecânica semelhante à mecânica de batalha dos jogos clássicos. (+/- ok, basear no que tem no protótipo.)
 5. Criar um algorítimo que diga ao programa que Pokémon irá fazer o primeiro movimento.
 6. Criar um algorítimo que cause o dano no Pokémon adversário.
 7. Criar um algorítimo que cause buffs/debuffs/efeitos negativos(dormir/envenenamento/congelamento...).
