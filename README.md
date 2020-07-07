@@ -1,4 +1,4 @@
-# simulador-pykemon
+Simulador PokePython
 Um simulador de batalhas Pokémon em Python
 
 - Para a utilização do programa, execute o arquivo pokepython.py com o Python3.
@@ -6,12 +6,12 @@ Um simulador de batalhas Pokémon em Python
 
 Este é um projeto de um iniciante em programação, feito com o intúito de aprender a utilizar as diversas possibilidades na programação. :)
 
-A idéia inicial foi simular uma batalha 1 vs 1 (dois jogadores) e definir poucos Pokémons com uma lista de golpes pré definida. Eu devo disponibilizar o arquivo do protótipo (inconcluído).
+A idéia inicial veio da necessidade de aprender os princípios da programação orientada a objetos, então tive a ideia de simular uma batalha 1 vs 1 (dois jogadores), definindo poucos Pokémons com uma lista de golpes pré definida. Eu devo disponibilizar o arquivo do protótipo (inconcluído).
 
 Após ouvir a opinião de alguns amigos mais experiêntes, vi que minhas soluções não foram muito inteligentes e acabei seguindo por outro norte para o registro de Pokémons e golpes.
-A nova ideia foi utilizar um dataset disponibilizado na internet (https://www.kaggle.com/mylesoneill/pokemon-sun-and-moon-gen-7-stats/) como base para alimentar o programa.
+A nova ideia foi utilizar um dataset disponibilizado na internet (https://www.kaggle.com/mylesoneill/pokemon-sun-and-moon-gen-7-stats/) como base para alimentar o programa. Todos os arquivos .csv vieram desta fonte, apesar de alguns arquivos terem sido modificados com ajustes para se adequar à programação utilizada.
 
-O passo a passo que pensei para a construção do programa (desde o projeto inicial) foi:
+O passo a passo que pensei para a construção do programa foi:
 1. Registrar os Pokémons no programa. (ok)
 2. Registrar os golpes no programa. (ok)
 3. Fazer os ajustes no(s) Pokémon(s) escolhido(s) pelo(s) jogador(es). Level, golpes, natureza, atributos... (+/- ok)
@@ -25,4 +25,4 @@ O passo a passo que pensei para a construção do programa (desde o projeto inic
 7. Criar um algorítimo que cause buffs/debuffs/efeitos negativos(dormir/envenenamento/congelamento...).
 8. Qualquer demanda que surgir durante o desenvolvimento.
 
-A utilização de qualquer coisa protegida por direitos autorais neste projeto não possui intenção comercial. A utilização dos Pokémons para este programa veio pela minha paixão pela franquia, por conhecimento de boa parte das mecânicas do jogo e com intúito de aprender novas coisas sobre programação seguindo as demandas do programa. :)
+A utilização de qualquer coisa protegida por direitos autorais neste projeto não possui intenção comercial. A decisão de utilização dos Pokémons para este programa veio pela minha paixão pela franquia, por conhecimento de boa parte das mecânicas do jogo e com intúito de aprender novas coisas sobre programação seguindo as demandas do programa. :)
