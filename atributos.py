@@ -11,10 +11,12 @@ class Atributos:
 def import_atributo(dataset_ulr):
     file = open(dataset_ulr)
     atributos = {}
-    for atributo in file:
-        coluna = atributo.split(',')
+    for linha in file:
+        coluna = linha.split(',')
         if not coluna[0].isnumeric:
            continue
-        atributo = Atributos(coluna[3], coluna[9], coluna[10], coluna[11], coluna[12], coluna[13], coluna[14]) 
+        atributo = Atributos(coluna[3], coluna[9], coluna[10], coluna[11], coluna[12], coluna[13], coluna[14])        
         atributos[coluna[3]] = atributo
     return atributos
+
+lista = import_atributo('pokemon.csv')

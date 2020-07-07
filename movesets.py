@@ -1,23 +1,33 @@
 class MoveSet:
-    def __init__(self, forme):
+    def __init__(self, forme, golpes_possiveis):
         self.forme = forme
-        self.golpes_possiveis = []
+        self.golpes_possiveis = golpes_possiveis
+
+def isvazio(campo):
+    if campo == '':
+        return True
+    else:
+        return False
 
 def import_moveset(dataset_ulr):
+    from movesets import isvazio
     file = open(dataset_ulr)
-    # movesets = {Chave pokemon: Value :{chave lv: value move}}
     movesets = {}
-    for moveset in file:
-        linha = moveset.split(',')
+    for poke in file:
+        linha = poke.split(',')
         if not linha[0].isnumeric:
            continue
-        moveset = MoveSet(linha[2]) #aqui eu tô dizendo que moveset é um objeto da classe MoveSet e que a forme dele é a linha[2]
-        golpes = {}
-        for move in linha[3:]:
-            golpe = move.split(' , ') # Ex.: L3 - Growl -> golpe[0] = L3 e golpe[1] = Growl, logo golpe[0] = quando aprende e golpe[1] = golpe. eu quero chamar pelo nome do golpe
-            movetitle = move.title()
-            if not movetitle.istitle: #eu tenho L3 - Growl, que já é title, porém para o caso de ORAS - Algumgolpe, a função title acusa False. então eu começo criando a função movetitle pra já deixar o texto escrito em title e só filtrar as colunas vazias.
+        golpes = []
+        for golpe in linha[3:]:
+            if isvazio(golpe):
                 continue
-            golpes[golpe[1]] = golpe[0]
-        moveset.golpes_possiveis = golpes
+            linha_golpe = golpe.split(' - ')
+            golpes.append(
+                {
+                    'move' : linha_golpe[-1],
+                    'aprende' : linha_golpe[0]
+                }
+            )
+        moveset = MoveSet(linha[2], golpes)
+        movesets[linha[2]] = moveset
     return movesets

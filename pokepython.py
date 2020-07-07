@@ -1,13 +1,13 @@
-from player import Player
-from player import import_player
+from loader import Loader
+from loader import import_loader
 
-lista_player = import_player('pokemon.csv')
+loader = import_loader('pokemon.csv')
 
-player1 = lista_player[input('Player 1: Escolha um pokémon: ')]
+player1 = loader[input('Player 1: Escolha um pokémon: ')]
 player1.pokemon.level = input('{} lvl: '.format(player1.pokemon.forme))
 print('')
 
-player2 = lista_player[input('Player 2: Escolha um pokémon: ')]
+player2 = loader[input('Player 2: Escolha um pokémon: ')]
 player2.pokemon.level = input('{} lvl: '.format(player2.pokemon.forme))
 print('')
 
@@ -17,10 +17,12 @@ print('')
 
 player1.atributos.hp = int(player1.atributos.hp)
 player2.atributos.hp = int(player2.atributos.hp)
-while not player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
+while player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
     for player in players:
         print('{} ({}/{}): HP: {}'.format(player.pokemon.forme, player.pokemon.type1, player.pokemon.type2, player.atributos.hp)) 
         print('Golpes:')
+        for golpe in player.movesets.golpes_possiveis:
+            print(golpe)
         player.golpe_usado = input('Escolha um golpe: ')  
         print('')
     
