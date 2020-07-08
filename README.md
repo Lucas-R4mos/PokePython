@@ -3,7 +3,7 @@ Um simulador de batalhas Pokémon em Python
 
 - Link para testar o jogo (Notebook no Google Colab): http://tiny.cc/TestePokePython
 - Para a utilização do programa, execute o arquivo pokepython.py com o Python3.
-- A escolha dos Pokémon é de acordo com o nome do Pokémon com a inicial em maiúsculo (Blastoise, Charizard, etc.).
+- A escolha dos Pokémon é de acordo com o nome do Pokémon em inglês e com as iniciais em maiúsculo (Bulbasaur, Ho-Oh, etc.).
 
 Este é um projeto de um iniciante em programação, feito com o intúito de aprender a utilizar as diversas possibilidades na programação. :)
 
