@@ -1,6 +1,7 @@
 ## Simulador PokePython
 Um simulador de batalhas Pokémon em Python
 
+- Link para testar o jogo: https://colab.research.google.com/drive/1XkrRDMVbq0p1APnKmz5SAQd6IKvE42ju
 - Para a utilização do programa, execute o arquivo pokepython.py com o Python3.
 - A escolha dos Pokémon é de acordo com o nome do Pokémon com a inicial em maiúsculo (Blastoise, Charizard, etc.).
 
