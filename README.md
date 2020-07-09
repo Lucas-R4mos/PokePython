@@ -5,6 +5,9 @@ Um simulador de batalhas Pokémon em Python
 - Para a utilização do programa, execute o arquivo pokepython.py com o Python3.
 - A escolha dos Pokémon é de acordo com o nome do Pokémon em inglês e com as iniciais em maiúsculo (Bulbasaur, Ho-Oh, etc.).
 
+Notas sobre a atual versão:
+- Após a escolha dos Pokémon, surgirá uma mensagem de erro, pois a última implementação mudou a apresentação de alguns dados, o que tá dando algum trabalho para fazer as novas associações.
+
 Este é um projeto de um iniciante em programação, feito com o intúito de aprender as diversas possibilidades na programação. :)
 
 A motivação veio com o início do aprendizado sobre a programação orientada a objetos, então surgiu a ideia de simular uma batalha Pokémon semelhante à que ocorre nos jogos da primeira geração quando se escolhe o Pokémon inicial. Está disponível o arquivo do protótipo com esta versão inconcluída.
