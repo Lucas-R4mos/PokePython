@@ -1,22 +1,42 @@
 print('Esta versão contém erro após a escolha dos Pokémons.')
 
-from loader import escolher_pokemon
+from loader import Loader
+from loader import import_loader
+from loader import escolher_level
+from loader import escolher_golpes
 
-player1 = 'Player 1'
-player2 = 'Player 2'
+loader = import_loader('pokemon.csv')
+
+confirma = False
+while not confirma:
+    try:
+        player1 = loader[input('Player 1: Escolha um Pokémon: ')]
+    except KeyError:
+        print('Opção Inválida.')
+    else:
+        confirma = True
+escolher_level(player1)
+escolher_golpes(player1)
+
+confirma = False
+while not confirma:
+    try:
+        player2 = loader[input('Player 2: Escolha um Pokémon: ')]
+    except KeyError:
+        print('Opção Inválida.')
+    else:
+        confirma = True
+escolher_level(player2)
+escolher_golpes(player2)
 players = [player1, player2]
-for player in players:
-    escolher_pokemon(player)
-    print('')
 
-# Com as exceções de escolha prontas, o próximo passo é fazer a relação dos novos dados com os códigos a seguir, que estão no formato dos dados antigos.
-print('{} lvl {} vs {} lvl {}'.format(player1.forme, player1.level, player2.forme, player2.level))
+print('{} L{} vs {} L{}'.format(player1.forme, player1.level, player2.forme, player2.level))
 players = [player1, player2]
 print('')
 
 player1.atributos.hp = int(player1.atributos.hp)
 player2.atributos.hp = int(player2.atributos.hp)
-while player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
+while not player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
     for player in players:
         print('{} ({}/{}): HP: {}'.format(player.forme, player.pokemon.type1, player.pokemon.type2, player.atributos.hp)) 
         print('Golpes:')
