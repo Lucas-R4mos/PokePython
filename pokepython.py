@@ -1,5 +1,3 @@
-print('Esta versão contém erro após a escolha dos Pokémons.')
-
 from loader import Loader
 from loader import import_loader
 from loader import escolher_level
@@ -40,8 +38,9 @@ while not player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
     for player in players:
         print('{} ({}/{}): HP: {}'.format(player.forme, player.pokemon.type1, player.pokemon.type2, player.atributos.hp)) 
         print('Golpes:')
-        for golpe in player.movesets.golpes_possiveis:
-            print(golpe)
+        golpes = (player.golpe1, player.golpe2, player.golpe3, player.golpe4)
+        for golpe in golpes:
+            print('{} ({}): PP: {} Power: {} Accuracy: {}'.format(golpe.move, golpe.type, golpe.pp, golpe.power, golpe.accuracy))
         player.golpe_usado = input('Escolha um golpe: ')  
         print('')
     
