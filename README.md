@@ -20,7 +20,7 @@ As demandas do projeto são:
 2. ~Registrar os golpes no programa.~ (ok)
 3. Fazer os ajustes nos Pokémons escolhidos pelo usuário. (Ex.: Level, golpes, natureza, atributos...) (Em progresso)
 - OBS: já concluído: level, atributos base, MoveSet.
-- Escolher 4 golpes entre os possíveis para o Pokémon (de forma aleatória? escolhendo um por um? escolhendo os últimos que o Pokémon aprendeu naquele level?)
+- ~Escolher 4 golpes entre os possíveis para o Pokémon~ (ok)
 - Importar a natureza dos pokémons.
 - Nova demanda: Aplicar um algorítimo que faça os atributos do pokémon crescerem de acordo com o level escolhido.
 4. Criar um algorítimo para o funcionamento da batalha com uma mecânica semelhante à mecânica de batalha dos jogos clássicos. (Basear no protótipo.)

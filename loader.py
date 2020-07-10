@@ -4,10 +4,12 @@ from atributos import Atributos
 from atributos import import_atributo
 from movesets import MoveSet
 from movesets import import_moveset
+from golpes import import_golpe
 
 lista_pokemons = import_pokemon('pokemon.csv')
 lista_atributos = import_atributo('pokemon.csv')
 lista_movesets = import_moveset('movesets.csv')
+lista_golpes = import_golpe('moves.csv')
 
 class Loader:
     def __init__(self, forme):
@@ -62,9 +64,6 @@ def escolher_level(player):
             confirma = True
     print('')
 def escolher_golpes(player):
-    # from golpes import Golpe
-    # from golpes import import_golpe
-    # lista_golpes = import_golpe('moves.csv')
     print('Golpes possíveis para {}'.format(player.forme))
     for key in player.movesets.golpes_possiveis:
         if aprende_start(player.movesets.golpes_possiveis[key]):
@@ -73,5 +72,11 @@ def escolher_golpes(player):
             level_golpe = filtra_level(player.movesets.golpes_possiveis[key])
             if level_golpe <= player.level:
                 print(key + ' : ' + player.movesets.golpes_possiveis[key])
+    print('')
+    print('Escolha entre os golpes listados: ')
+    player.golpe1 = lista_golpes[input('Golpe 1: ')]
+    player.golpe2 = lista_golpes[input('Golpe 2: ')]
+    player.golpe3 = lista_golpes[input('Golpe 3: ')]
+    player.golpe4 = lista_golpes[input('Golpe 4: ')]
     print('')
     return player
