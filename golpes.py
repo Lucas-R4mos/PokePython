@@ -15,7 +15,7 @@ def import_golpe(dataset_ulr):
     file = open(dataset_ulr)
     golpes = {}
     for golpe in file:
-        linha = golpe.split(',')
+        linha = golpe.split('|')
         if not linha[0].isnumeric:
             continue
         golpe = Golpe(linha[0], linha[1], linha[2], linha[3], linha[4], linha[5], linha[6], linha[7], linha[9], linha[10])
