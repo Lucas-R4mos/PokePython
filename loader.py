@@ -18,6 +18,7 @@ class Loader:
         self.atributos = lista_atributos[self.forme]
         self.movesets = lista_movesets[self.forme]
         self.level = []
+        self.golpes_liberados = []
         self.golpe1 = []
         self.golpe2 = []
         self.golpe3 = []
@@ -65,18 +66,71 @@ def escolher_level(player):
     print('')
 def escolher_golpes(player):
     print('Golpes possíveis para {}'.format(player.forme))
+    
     for key in player.movesets.golpes_possiveis:
         if aprende_start(player.movesets.golpes_possiveis[key]):
-            print(key + ' : ' + player.movesets.golpes_possiveis[key])
+            player.golpes_liberados.append(key)
         if aprende_level(player.movesets.golpes_possiveis[key]):
             level_golpe = filtra_level(player.movesets.golpes_possiveis[key])
             if level_golpe <= player.level:
-                print(key + ' : ' + player.movesets.golpes_possiveis[key])
+                player.golpes_liberados.append(key)
+    
+    for golpe in player.golpes_liberados:
+        print(lista_golpes[golpe].move + ' (' + lista_golpes[golpe].type + ') -> Power: '+ lista_golpes[golpe].power + '/ Accuracy: ' + lista_golpes[golpe].accuracy)
+
     print('')
-    print('Escolha entre os golpes listados: ')
-    player.golpe1 = lista_golpes[input('Golpe 1: ')]
-    player.golpe2 = lista_golpes[input('Golpe 2: ')]
-    player.golpe3 = lista_golpes[input('Golpe 3: ')]
-    player.golpe4 = lista_golpes[input('Golpe 4: ')]
+    print('Escolha 4 entre os golpes listados: ')
+
+    confirma1 = False
+    while not confirma1:
+        try:
+            player.golpe1 = lista_golpes[input('Golpe 1: ')]
+            if not player.golpe1.move in player.golpes_liberados:
+                raise KeyError
+        except KeyError:
+            print('Opção Inválida.')
+        else:
+            confirma1 = True
+
+    confirma2 = False
+    while not confirma2:
+        try:
+            player.golpe2 = lista_golpes[input('Golpe 2: ')]
+            if not player.golpe2.move in player.golpes_liberados:
+                raise KeyError
+            if player.golpe2 == player.golpe1:
+                raise KeyError
+        except KeyError:
+            print('Opção Inválida.')
+        else:
+            confirma2 = True
+
+    confirma3 = False
+    while not confirma3:
+        try:
+            player.golpe3 = lista_golpes[input('Golpe 3: ')]
+            if not player.golpe3.move in player.golpes_liberados:
+                raise KeyError
+            if player.golpe3 == player.golpe2 or player.golpe3 == player.golpe1:
+                raise KeyError
+        except KeyError:
+            print('Opção Inválida.')
+        else:
+            confirma3 = True
+
+    confirma4 = False
+    while not confirma4:
+        try:
+            player.golpe4 = lista_golpes[input('Golpe 4: ')]
+            if not player.golpe4.move in player.golpes_liberados:
+                raise KeyError
+            if player.golpe4 == player.golpe3 or player.golpe4 == player.golpe2 or player.golpe4 == player.golpe1:
+                raise KeyError
+        except KeyError:
+            print('Opção Inválida.')
+        else:
+            confirma4 = True
+    
     print('')
+
     return player
