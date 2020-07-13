@@ -41,7 +41,17 @@ while not player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
         golpes = (player.golpe1, player.golpe2, player.golpe3, player.golpe4)
         for golpe in golpes:
             print('{} ({}): PP: {} Power: {} Accuracy: {}'.format(golpe.move, golpe.type, golpe.pp, golpe.power, golpe.accuracy))
-        player.golpe_usado = input('Escolha um golpe: ')  
+        confirma = False
+        while not confirma:
+            try:
+                player.golpe_usado = input('Escolha um golpe: ')
+                if not player.golpe_usado in golpes:
+                    raise KeyError
+            except KeyError:
+                print('Opção inválida.')
+            else:
+                confirma = True
+
         print('')
     
     print('{} usou {}.'.format(player1.forme, player1.golpe_usado))
