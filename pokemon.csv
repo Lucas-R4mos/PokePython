@@ -1,4 +1,3 @@
-id,ndex,species,forme,type1,type2,ability1,ability2,abilityH,hp,attack,defense,spattack,spdefense,speed,total,weight,height,dex1,dex2,class,percent-male,percent-female,pre-evolution,egg-group1,egg-group2
 1,1,Bulbasaur,Bulbasaur,Grass,Poison,Overgrow,,Chlorophyll,45,49,49,65,65,45,318,15.2 lbs.,"2'04""",,,Seed Pokémon,0.875,0.125,,Monster,Grass
 2,2,Ivysaur,Ivysaur,Grass,Poison,Overgrow,,Chlorophyll,60,62,63,80,80,60,405,28.7 lbs.,"3'03""",,,Seed Pokémon,0.875,0.125,Bulbasaur,Monster,Grass
 3,3,Venusaur,Venusaur,Grass,Poison,Overgrow,,Chlorophyll,80,82,83,100,100,80,525,220.5 lbs.,"6'07""",,,Seed Pokémon,0.875,0.125,Ivysaur,Monster,Grass

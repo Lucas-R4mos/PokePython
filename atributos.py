@@ -15,7 +15,7 @@ def import_atributo(dataset_ulr):
         coluna = linha.split(',')
         if not coluna[0].isnumeric:
            continue
-        atributo = Atributos(coluna[3], coluna[9], coluna[10], coluna[11], coluna[12], coluna[13], coluna[14])        
+        atributo = Atributos(coluna[3], int(coluna[9]), int(coluna[10]), int(coluna[11]), int(coluna[12]), int(coluna[13]), int(coluna[14]))
         atributos[coluna[3]] = atributo
     return atributos
 
