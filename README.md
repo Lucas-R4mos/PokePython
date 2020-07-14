@@ -18,7 +18,7 @@ A nova ideia foi utilizar um dataset disponibilizado na internet (https://www.ka
 As demandas do projeto são:
 1. ~Registrar os Pokémons no programa.~ (ok)
 2. ~Registrar os golpes no programa.~ (ok)
-3. Fazer os ajustes nos Pokémons escolhidos pelo usuário. (Em progresso)
+3. Fazer os ajustes nos Pokémons escolhidos pelo usuário. (Ex.: Level, golpes, natureza, atributos...) (Em progresso)
 - Importar a natureza dos pokémons.
 - Aplicar um algorítimo que faça os atributos do pokémon crescerem de acordo com o level escolhido.
 4. Criar um algorítimo para o funcionamento da batalha com uma mecânica semelhante à mecânica de batalha dos jogos clássicos. (Em progresso)
