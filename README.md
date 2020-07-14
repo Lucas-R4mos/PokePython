@@ -18,12 +18,10 @@ A nova ideia foi utilizar um dataset disponibilizado na internet (https://www.ka
 As demandas do projeto são:
 1. ~Registrar os Pokémons no programa.~ (ok)
 2. ~Registrar os golpes no programa.~ (ok)
-3. Fazer os ajustes nos Pokémons escolhidos pelo usuário. (Ex.: Level, golpes, natureza, atributos...) (Em progresso)
-- OBS: já concluído: level, atributos base, MoveSet.
-- ~Escolher 4 golpes entre os possíveis para o Pokémon~ (ok)
+3. Fazer os ajustes nos Pokémons escolhidos pelo usuário. (Em progresso)
 - Importar a natureza dos pokémons.
-- Nova demanda: Aplicar um algorítimo que faça os atributos do pokémon crescerem de acordo com o level escolhido.
-4. Criar um algorítimo para o funcionamento da batalha com uma mecânica semelhante à mecânica de batalha dos jogos clássicos. (Basear no protótipo.)
+- Aplicar um algorítimo que faça os atributos do pokémon crescerem de acordo com o level escolhido.
+4. Criar um algorítimo para o funcionamento da batalha com uma mecânica semelhante à mecânica de batalha dos jogos clássicos. (Em progresso)
 5. Importar a tabela de multiplicador de dano entre tipos. 
 6. Criar um algorítimo que escolha o Pokémon que irá agir primeiro.
 7. Criar um algorítimo que cause o dano no Pokémon adversário.
