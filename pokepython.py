@@ -2,8 +2,10 @@ from loader import Loader
 from loader import import_loader
 from loader import escolher_level
 from loader import escolher_golpes
+from loader import import_golpe
 
 loader = import_loader('pokemon.csv')
+lista_golpes = import_golpe('moves.csv')
 
 confirma = False
 while not confirma:
@@ -45,8 +47,9 @@ while not player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
         while not confirma:
             try:
                 player.golpe_usado = input('Escolha um golpe: ')
-                if not player.golpe_usado in golpes:
-                    raise KeyError
+                for golpe in golpes:
+                    if player.golpe_usado == golpe.move:
+                        player.golpe_usado = golpe                 
             except KeyError:
                 print('Opção inválida.')
             else:
@@ -54,9 +57,27 @@ while not player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
 
         print('')
     
-    print('{} usou {}.'.format(player1.forme, player1.golpe_usado))
-    print('{} usou {}.'.format(player2.forme, player2.golpe_usado))
+    # Cálculos para dano em combate.
+    if player1.golpe_usado.category == 'Physical':
+        danop1 = (((((2 * player1.level) / 5) + 2) * player1.golpe_usado.power * (player1.atributos.attack / player2.atributos.defense) / 50) + 2)
+    if player1.golpe_usado.category == 'Special':
+        danop1 = (((((2 * player1.level) / 5) + 2) * player1.golpe_usado.power * (player1.atributos.spattack / player2.atributos.spdefense) / 50) + 2)
+    if player1.golpe_usado.category == 'Status':
+        danop1 = 0
+
+    if player2.golpe_usado.category == 'Physical':
+        danop2 = (((((2 * player2.level) / 5) + 2) * player2.golpe_usado.power * (player2.atributos.attack / player1.atributos.defense) / 50) + 2)
+    if player2.golpe_usado.category == 'Special':
+        danop2 = (((((2 * player2.level) / 5) + 2) * player2.golpe_usado.power * (player2.atributos.spattack / player1.atributos.spdefense) / 50) + 2)
+    if player1.golpe_usado.category == 'Status':
+        danop2 = 0
+
+    print('{} usou {}. Causou {} de dano.'.format(player1.forme, player1.golpe_usado.move, round((danop1),0)))
+    print('{} usou {}. Causou {} de dano.'.format(player2.forme, player2.golpe_usado.move, round((danop2),0)))
     print('')
+
+    player1.atributos.hp = player1.atributos.hp - danop2
+    player2.atributos.hp = player2.atributos.hp - danop1
 
 
 # Dano = (((((2 * level) / 5) + 2) * poder * (ataque / defesa) / 50) + 2) * Modificador

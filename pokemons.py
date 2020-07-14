@@ -16,3 +16,6 @@ def import_pokemon(dataset_ulr):
         poke = Pokemon(linha[0], linha[2], linha[3], linha[4], linha[5]) 
         pokemons[linha[3]] = poke
     return pokemons
+
+# Cabeçalho da tabela pokemon.csv:
+# id,ndex,species,forme,type1,type2,ability1,ability2,abilityH,hp,attack,defense,spattack,spdefense,speed,total,weight,height,dex1,dex2,class,percent-male,percent-female,pre-evolution,egg-group1,egg-group2

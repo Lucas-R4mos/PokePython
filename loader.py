@@ -76,7 +76,7 @@ def escolher_golpes(player):
                 player.golpes_liberados.append(key)
     
     for golpe in player.golpes_liberados:
-        print(lista_golpes[golpe].move + ' (' + lista_golpes[golpe].type + ') -> Power: '+ lista_golpes[golpe].power + '/ Accuracy: ' + lista_golpes[golpe].accuracy)
+        print(lista_golpes[golpe].move + ' (' + lista_golpes[golpe].type + ') -> Power: '+ str(lista_golpes[golpe].power) + '/ Accuracy: ' + lista_golpes[golpe].accuracy)
 
     print('')
     print('Escolha 4 entre os golpes listados: ')
