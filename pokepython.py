@@ -38,11 +38,11 @@ player1.atributos.hp = int(player1.atributos.hp)
 player2.atributos.hp = int(player2.atributos.hp)
 while not player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
     for player in players:
-        print('{} ({}/{}): HP: {}'.format(player.forme, player.pokemon.type1, player.pokemon.type2, player.atributos.hp)) 
+        print('{} ({}/{}): HP: {}'.format(player.forme, player.pokemon.type1, player.pokemon.type2, round((player.atributos.hp),2))) 
         print('Golpes:')
         golpes = (player.golpe1, player.golpe2, player.golpe3, player.golpe4)
         for golpe in golpes:
-            print('{} ({}): PP: {} Power: {} Accuracy: {}'.format(golpe.move, golpe.type, golpe.pp, golpe.power, golpe.accuracy))
+            print('{} ({})({}): PP: {} Power: {} Accuracy: {}'.format(golpe.move, golpe.type, golpe.category, golpe.pp, golpe.power, golpe.accuracy))
         confirma = False
         while not confirma:
             try:
