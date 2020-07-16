@@ -22,7 +22,7 @@ As demandas do projeto são:
 - Importar a natureza dos pokémons.
 - Aplicar um algorítimo que faça os atributos do pokémon crescerem de acordo com o level escolhido.
 4. Criar um algorítimo para o funcionamento da batalha com uma mecânica semelhante à mecânica de batalha dos jogos clássicos. (Em progresso)
-5. Importar a tabela de multiplicador de dano entre tipos. 
+5. ~Importar a tabela de multiplicador de dano entre tipos.~ (ok)
 6. Criar um algorítimo que escolha o Pokémon que irá agir primeiro.
 7. Criar um algorítimo que cause o dano no Pokémon adversário.
 8. Criar um algorítimo que cause buffs/debuffs/efeitos negativos(dormir/envenenamento/congelamento...).
