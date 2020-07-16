@@ -38,23 +38,20 @@ player1.atributos.hp = int(player1.atributos.hp)
 player2.atributos.hp = int(player2.atributos.hp)
 while not player1.atributos.hp <= 0 or player2.atributos.hp <= 0:
     for player in players:
-        print('{} ({}/{}): HP: {}'.format(player.forme, player.pokemon.type1, player.pokemon.type2, round((player.atributos.hp),2))) 
+        print('{} ({}/{}): HP: {}'.format(player.forme, player.pokemon.type1, player.pokemon.type2, int((player.atributos.hp)))) 
         print('Golpes:')
         golpes = (player.golpe1, player.golpe2, player.golpe3, player.golpe4)
         for golpe in golpes:
             print('{} ({})({}): PP: {} Power: {} Accuracy: {}'.format(golpe.move, golpe.type, golpe.category, golpe.pp, golpe.power, golpe.accuracy))
         confirma = False
         while not confirma:
-            try:
-                player.golpe_usado = input('Escolha um golpe: ')
-                for golpe in golpes:
-                    if player.golpe_usado == golpe.move:
-                        player.golpe_usado = golpe                 
-            except KeyError:
+            player.golpe_usado = input('Escolha um golpe: ')
+            for golpe in golpes:
+                if player.golpe_usado == golpe.move:
+                    confirma = True
+            if not confirma:
                 print('Opção inválida.')
-            else:
-                confirma = True
-
+        player.golpe_usado = lista_golpes[player.golpe_usado]
         print('')
     
     # Cálculos para dano em combate.
