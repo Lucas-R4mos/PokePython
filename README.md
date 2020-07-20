@@ -1,5 +1,7 @@
 ## Simulador PokePython
 Um simulador de batalhas Pokémon em Python
+# Esta versão está descontinuada.
+Continuarei em uma versão 2.0 utilizando uma API para alimentar o programa. Os dados obtidos das tabelas não foram o suficiente para continuar o programa com as funcionalidades do jogo original.
 
 - Link para testar o jogo (Notebook no Google Colab): http://tiny.cc/TestePokePython
 - Para a utilização do programa, execute o arquivo pokepython.py com o Python3.
