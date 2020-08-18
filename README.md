@@ -1,5 +1,5 @@
 ## Simulador PokePython
-Um simulador de batalhas Pokémon em Python
+Este projeto está sendo sucedido pelo https://github.com/Lucas-R4mos/PokeJS :)
 # Esta versão está descontinuada.
 Continuarei em uma versão 2.0 utilizando uma API para alimentar o programa. Os dados obtidos das tabelas não foram o suficiente para continuar o programa com as funcionalidades do jogo original.
 
